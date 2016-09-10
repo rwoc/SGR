@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Agregado extends Model
+class Reservas extends Model
 {
     //
 }

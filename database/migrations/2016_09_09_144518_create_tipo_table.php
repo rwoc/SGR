@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateRecursosTable extends Migration
+class CreateTipoTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,17 @@ class CreateRecursosTable extends Migration
      */
     public function up()
     {
-        Schema::create('recursos', function (Blueprint $table){
-            $table->increments('id');
-            $table->String('nome_recurso',4);
+        Schema::create('tipos', function (Blueprint $table) {
+            $table->increments('id_tipo');
+            $table->string('tipo_recurso',30);
         });
-
     }
 
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
     public function down()
     {
         //

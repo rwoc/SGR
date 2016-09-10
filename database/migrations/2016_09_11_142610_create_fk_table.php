@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateObjetosTable extends Migration
+class CreateFkTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,18 @@ class CreateObjetosTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::table('recursos', function (Blueprint $table) {
+            $table->foreign('id_tipo')->references('id_tipo')->on('tipos');
+        });
+
+        Schema::table('reservas', function (Blueprint $table) {
+            $table->foreign('cod_tomb')->references('cod_tomb')->on('recursos');
+        });
+
+
+
+
+
     }
 
     /**
