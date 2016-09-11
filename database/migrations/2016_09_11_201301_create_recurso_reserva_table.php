@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateReservasTable extends Migration
+class CreateRecursoReservaTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,10 @@ class CreateReservasTable extends Migration
      */
     public function up()
     {
-        Schema::create('reservas', function (Blueprint $table) {
-            $table->increments('id_reserva');
-            $table->date('data_reserva');
-            $table->date('data_entrega');
-            $table->unsignedInteger('cod_tomb',30);
+
+        Schema::create('recurso_reserva', function (Blueprint $table) {
+            $table->unsignedInteger('reserva_id');
+            $table->unsignedInteger('recurso_id');
         });
     }
 

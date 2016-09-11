@@ -225,6 +225,12 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
+        'Recurso' => App\Recurso::class,
+        'Reserva' => App\Reserva::class,
+        'Tipo' => App\Tipo::class,
+        'User'=>App\User::class,
+
+
     ],
 
 ];

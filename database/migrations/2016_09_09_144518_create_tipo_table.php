@@ -16,6 +16,7 @@ class CreateTipoTable extends Migration
         Schema::create('tipos', function (Blueprint $table) {
             $table->increments('id_tipo');
             $table->string('tipo_recurso',30);
+            $table->timestamps();
         });
     }
 
